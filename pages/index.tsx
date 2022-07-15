@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { AppShell, Navbar, Header, Title } from "@mantine/core";
+import { AppShell, Navbar, Progress, Header, Text, Title, Paper } from "@mantine/core";
 
 const Home: NextPage = () => {
   return (
@@ -32,6 +32,19 @@ const Home: NextPage = () => {
         })}
       >
         <Title order={1}>Computer Science (MS)</Title>
+        <Paper shadow="xs" p="md">
+          <Title order={2}>Progress at a Glance</Title>
+          <>
+            <>
+              <Text>45 required, 22 completed, 23 remaining</Text>
+              <Progress size="xl" value={50} />
+            </>
+            <>
+              <Text>36 required, 22 completed, 14 remaining</Text>
+              <Progress size="xl" value={60} />
+            </>
+          </>
+        </Paper>
       </AppShell>
     </>
   );
